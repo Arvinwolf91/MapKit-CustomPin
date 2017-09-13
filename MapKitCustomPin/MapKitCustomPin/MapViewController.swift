@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     var locationManager:CLLocationManager!
@@ -36,14 +36,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         determineCurrentLocation()
     }
     
     func determineCurrentLocation() {
-        
         locationManager.requestWhenInUseAuthorization()
-        
         if CLLocationManager.locationServicesEnabled() {
             //locationManager.startUpdatingHeading()
             locationManager.startUpdatingLocation()
