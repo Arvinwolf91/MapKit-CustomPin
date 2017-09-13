@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -40,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008.8" y="791.15442278860576"/>
+            <point key="canvasLocation" x="1433" y="791"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wmn-oF-e4l">
@@ -53,12 +54,58 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KGE-x8-O2f"/>
+                        <segue destination="Kmr-a0-Q8c" kind="relationship" relationship="rootViewController" id="SME-vm-d0J"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NhT-oT-Yjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176.80000000000001" y="791.15442278860576"/>
+            <point key="canvasLocation" x="-263" y="791"/>
+        </scene>
+        <!--Select Location View Controller-->
+        <scene sceneID="gfE-BL-pbL">
+            <objects>
+                <viewController id="Kmr-a0-Q8c" customClass="SelectLocationViewController" customModule="MapKitCustomPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OQL-Uy-zhZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="AS3-me-QEk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PK5-gK-EIG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qxy-Cz-yH5">
+                                <rect key="frame" x="76" y="136" width="222" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeV-up-lw4">
+                                <rect key="frame" x="72" y="336" width="230" height="30"/>
+                                <state key="normal" title="Show Location in Map"/>
+                                <connections>
+                                    <action selector="onShowLocationInMap:" destination="Kmr-a0-Q8c" eventType="touchUpInside" id="G6A-R1-6BE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qxy-Cz-yH5" secondAttribute="trailing" constant="61" id="Tbz-Au-Gdn"/>
+                            <constraint firstItem="NeV-up-lw4" firstAttribute="leading" secondItem="PK5-gK-EIG" secondAttribute="leadingMargin" constant="56" id="VUj-oL-IkL"/>
+                            <constraint firstItem="NeV-up-lw4" firstAttribute="top" secondItem="Qxy-Cz-yH5" secondAttribute="bottom" constant="170" id="aeA-pM-JP6"/>
+                            <constraint firstItem="Qxy-Cz-yH5" firstAttribute="leading" secondItem="PK5-gK-EIG" secondAttribute="leadingMargin" constant="60" id="wna-EO-INw"/>
+                            <constraint firstItem="Qxy-Cz-yH5" firstAttribute="top" secondItem="OQL-Uy-zhZ" secondAttribute="bottom" constant="72" id="yZL-Xr-Meq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NeV-up-lw4" secondAttribute="trailing" constant="57" id="zTj-Ei-Aag"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cSt-CA-dJK"/>
+                    <connections>
+                        <outlet property="locationTextField" destination="Qxy-Cz-yH5" id="0OV-7I-qjn"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segue" id="Ii7-bP-sox"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jh7-xi-516" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596" y="789.35532233883066"/>
         </scene>
     </scenes>
 </document>

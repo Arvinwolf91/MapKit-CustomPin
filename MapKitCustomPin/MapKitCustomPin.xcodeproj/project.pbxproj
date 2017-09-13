@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C2ABC2591F6935CF001BF904 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ABC2581F6935CF001BF904 /* Extension.swift */; };
+		C2ABC25B1F6938D3001BF904 /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ABC25A1F6938D3001BF904 /* SelectLocationViewController.swift */; };
 		C2DBF1C31F5E59800005E82D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBF1C21F5E59800005E82D /* AppDelegate.swift */; };
 		C2DBF1C51F5E59800005E82D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBF1C41F5E59800005E82D /* MapViewController.swift */; };
 		C2DBF1C81F5E59800005E82D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DBF1C61F5E59800005E82D /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		C2ABC2581F6935CF001BF904 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		C2ABC25A1F6938D3001BF904 /* SelectLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectLocationViewController.swift; path = ../SelectLocationViewController.swift; sourceTree = "<group>"; };
 		C2DBF1BF1F5E59800005E82D /* MapKitCustomPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitCustomPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2DBF1C21F5E59800005E82D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2DBF1C41F5E59800005E82D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				C2DBF1C21F5E59800005E82D /* AppDelegate.swift */,
+				C2ABC25A1F6938D3001BF904 /* SelectLocationViewController.swift */,
 				C2DBF1C41F5E59800005E82D /* MapViewController.swift */,
 				C2ABC2581F6935CF001BF904 /* Extension.swift */,
 				C2DBF1C61F5E59800005E82D /* Main.storyboard */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2ABC2591F6935CF001BF904 /* Extension.swift in Sources */,
+				C2ABC25B1F6938D3001BF904 /* SelectLocationViewController.swift in Sources */,
 				C2DBF1C51F5E59800005E82D /* MapViewController.swift in Sources */,
 				C2DBF1C31F5E59800005E82D /* AppDelegate.swift in Sources */,
 			);
