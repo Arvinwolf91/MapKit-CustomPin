@@ -73,14 +73,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qxy-Cz-yH5">
-                                <rect key="frame" x="76" y="136" width="222" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pickup Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qxy-Cz-yH5">
+                                <rect key="frame" x="29" y="100" width="316" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose Destination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ddK-6a-y4K">
+                                <rect key="frame" x="29" y="149" width="316" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeV-up-lw4">
-                                <rect key="frame" x="72" y="336" width="230" height="30"/>
+                                <rect key="frame" x="72" y="222" width="230" height="30"/>
                                 <state key="normal" title="Show Location in Map"/>
                                 <connections>
                                     <action selector="onShowLocationInMap:" destination="Kmr-a0-Q8c" eventType="touchUpInside" id="G6A-R1-6BE"/>
@@ -89,17 +95,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Qxy-Cz-yH5" secondAttribute="trailing" constant="61" id="Tbz-Au-Gdn"/>
+                            <constraint firstItem="ddK-6a-y4K" firstAttribute="leading" secondItem="PK5-gK-EIG" secondAttribute="leadingMargin" constant="13" id="0wc-LP-sEc"/>
+                            <constraint firstItem="NeV-up-lw4" firstAttribute="top" secondItem="ddK-6a-y4K" secondAttribute="bottom" constant="43" id="4lT-Er-maZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qxy-Cz-yH5" secondAttribute="trailing" constant="14" id="Tbz-Au-Gdn"/>
                             <constraint firstItem="NeV-up-lw4" firstAttribute="leading" secondItem="PK5-gK-EIG" secondAttribute="leadingMargin" constant="56" id="VUj-oL-IkL"/>
-                            <constraint firstItem="NeV-up-lw4" firstAttribute="top" secondItem="Qxy-Cz-yH5" secondAttribute="bottom" constant="170" id="aeA-pM-JP6"/>
-                            <constraint firstItem="Qxy-Cz-yH5" firstAttribute="leading" secondItem="PK5-gK-EIG" secondAttribute="leadingMargin" constant="60" id="wna-EO-INw"/>
-                            <constraint firstItem="Qxy-Cz-yH5" firstAttribute="top" secondItem="OQL-Uy-zhZ" secondAttribute="bottom" constant="72" id="yZL-Xr-Meq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ddK-6a-y4K" secondAttribute="trailing" constant="14" id="f8i-Pp-NU2"/>
+                            <constraint firstItem="ddK-6a-y4K" firstAttribute="top" secondItem="Qxy-Cz-yH5" secondAttribute="bottom" constant="19" id="ozl-rd-Obu"/>
+                            <constraint firstItem="Qxy-Cz-yH5" firstAttribute="leading" secondItem="PK5-gK-EIG" secondAttribute="leadingMargin" constant="13" id="wna-EO-INw"/>
+                            <constraint firstItem="Qxy-Cz-yH5" firstAttribute="top" secondItem="OQL-Uy-zhZ" secondAttribute="bottom" constant="36" id="yZL-Xr-Meq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NeV-up-lw4" secondAttribute="trailing" constant="57" id="zTj-Ei-Aag"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cSt-CA-dJK"/>
                     <connections>
-                        <outlet property="locationTextField" destination="Qxy-Cz-yH5" id="0OV-7I-qjn"/>
+                        <outlet property="destinationTextField" destination="ddK-6a-y4K" id="2jR-hh-jd4"/>
+                        <outlet property="pickupTextField" destination="Qxy-Cz-yH5" id="whK-pr-Nco"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="segue" id="Ii7-bP-sox"/>
                     </connections>
                 </viewController>

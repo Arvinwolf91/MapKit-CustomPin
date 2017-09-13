@@ -10,7 +10,8 @@ import UIKit
 
 class SelectLocationViewController: UIViewController {
     
-    @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var pickupTextField: UITextField!
+    @IBOutlet weak var destinationTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
