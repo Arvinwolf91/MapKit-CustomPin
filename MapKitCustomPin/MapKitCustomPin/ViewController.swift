@@ -98,19 +98,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
         
         let pinImage = UIImage(named: "CarIcon")
-        let scaledPinImage = scaleDown(image: pinImage!, withSize: CGSize(width: 30, height: 30))
+        let scaledPinImage = pinImage?.scaleDown(image: pinImage!, withSize: CGSize(width: 30, height: 30))
         annotationView!.image = scaledPinImage
         
         return annotationView
-    }
-    
-    func scaleDown(image: UIImage, withSize: CGSize) -> UIImage {
-        let scale = UIScreen.main.scale
-        UIGraphicsBeginImageContextWithOptions(withSize, false, scale)
-        image.draw(in: CGRect(x: 0, y: 0, width: withSize.width, height: withSize.height))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage!
     }
 }
 
