@@ -52,14 +52,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation:CLLocation = locations[0] as CLLocation
-        print("Updating location")
+  
         // Call stopUpdatingLocation() to stop listening for location updates,
         // other wise this function will be called every time when user location changes.
         // manager.stopUpdatingLocation()
         
         let center = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-        
+        print(center)
         mapView.setRegion(region, animated: true)
         
         // Drop a pin at user's Current Location
@@ -67,6 +67,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         myAnnotation.coordinate = CLLocationCoordinate2DMake(userLocation.coordinate.latitude, userLocation.coordinate.longitude)
         myAnnotation.title = "Current location"
         mapView.addAnnotation(myAnnotation)
+        
+        // Fix duplicate annotation images
+        if mapView.annotations.count > 1 {
+            mapView.removeAnnotations(mapView.annotations)
+            mapView.addAnnotation(myAnnotation)
+        }
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
